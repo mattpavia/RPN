@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Reverse Polish Notation Calculator</title>
+        <script type="text/javascript" src="calculator.js"></script>
+    </head>
+
+    <body onload="init()">
+        <h1 style="text-align: center;">IE224 Reverse Polish Calculator</h1>
+        <div style="text-align: center; margin: 0 auto;">
+            <input type="text" id="sto" size="10" style="background-color: #FFF888;" disabled /> Constant<br />
+            <input type="text" id="T" size="20" disabled /> Mem Slot 3<br />
+            <input type="text" id="Z" size="20" disabled /> Mem Slot 2<br />
+            <input type="text" id="Y" size="20" disabled /> Mem Slot 1
+        </div>
+        <table border="1" id="calculator" style="text-align: center; margin: 0 auto; border-width: 4px;">
+            <tr>
+                <td colspan="5"><input id="display" type="text" size="28" style="text-align: left;" value="Hello" disabled /><input id="exponent" type="text" size="2" style="text-align: left;" disabled /></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"> <input type="button" value="x^y" onclick="buttonClick('x^y')" /></td>
+                <td style="text-align: center;"> <input type="button" value="log" onclick="buttonClick('log')" /></td>
+                <td style="text-align: center;"> <input type="button" value="ln" onclick="buttonClick('ln')" /></td>
+                <td style="text-align: center;"> <input type="button" value="e^x" onclick="buttonClick('e^x')" /></td>
+                <td style="text-align: center;"> <input type="button" value="CLR" onclick="buttonClick('clear')" /> </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"> <input type="button" value="^1/2" onClick="buttonClick('^1/2')" /></td>
+                <td style="text-align: center;"> <input type="button" value="arc" onClick="buttonClick('arc')" /></td>
+                <td style="text-align: center;"> <input type="button" value="sin" onClick="buttonClick('sin')" /></td>
+                <td style="text-align: center;"> <input type="button" value="cos" onClick="buttonClick('cos')" /></td>
+                <td style="text-align: center;"> <input type="button" value="tan" onClick="buttonClick('tan')" /></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><input type="button" value="1/x" onclick="buttonClick('1/x')" /></td>
+                <td style="text-align: center;"><input type="button" value="x<>y" onclick="buttonClick('x<>y')" /></td>
+                <td style="text-align: center;"><input type="button" value="Rv" onclick="buttonClick('roll')" /></td>
+                <td style="text-align: center;"><input type="button" value="STO" onclick="buttonClick('sto')" /></td>
+                <td style="text-align: center;"><input type="button" value="RCL" onclick="buttonClick('rcl')" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><input type="button" value="ENTER" onclick="buttonClick('enter')" /></td>
+                <td style="text-align: center;"><input type="button" value="CH S" onclick="buttonClick('chs')" /></td>
+                <td style="text-align: center;"><input type="button" value="E EX" onclick="buttonClick('ees')"  /></td>
+                <td style="text-align: center;"><input type="button" value="CL x" onclick="buttonClick('clx')" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><input type="button" value="     -     " onclick="buttonClick('-')" /></td>
+                <td style="text-align: center;"><input type="button" value="  7  " onclick="buttonClick('num', 7)" /></td>
+                <td style="text-align: center;"><input type="button" value="  8  " onclick="buttonClick('num', 8)" /></td>
+                <td style="text-align: center;"><input type="button" value="  9  " onclick="buttonClick('num', 9)" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><input type="button" value="    +    " onclick="buttonClick('+')"></td>
+                <td style="text-align: center;"><input type="button" value="  4  " onclick="buttonClick('num', 4)" /></td>
+                <td style="text-align: center;"><input type="button" value="  5  " onclick="buttonClick('num', 5)" /></td>
+                <td style="text-align: center;"><input type="button" value="  6  " onclick="buttonClick('num', 6)" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><input type="button" value="    X    " onclick="buttonClick('x')" /></td>
+                <td style="text-align: center;"><input type="button" value="  1  " onclick="buttonClick('num', 1)" /></td>
+                <td style="text-align: center;"><input type="button" value="  2  " onclick="buttonClick('num', 2)" /></td>
+                <td style="text-align: center;"><input type="button" value="  3  " onclick="buttonClick('num', 3)" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><input type="button" value="     /     " onclick="buttonClick('/')" /></td>
+                <td style="text-align: center;"><input type="button" value="  0  " onclick="buttonClick('num', 0)" /></td>
+                <td style="text-align: center;"><input type="button" value="  .  " onclick="buttonClick('.')" /></td>
+                <td style="text-align: center;"><input type="button" value="  PI  " onclick="buttonClick('num', 'pi')" /></td>
+            </tr>
+        </table>
+    </body>
+</html>
